@@ -1,0 +1,458 @@
+@charset "UTF-8";
+
+/*------------------------------------*\
+  #Fonts
+\*------------------------------------*/
+
+$body-font: 'Open Sans', sans-serif;
+$heading-font: 'Overpass', sans-serif;
+
+/*------------------------------------*\
+  #Variables
+\*------------------------------------*/
+
+$brand-color: #60a1bc;
+$grey: #58585a;
+$light-grey: #ededed;
+
+/*------------------------------------*\
+  #Imports
+\*------------------------------------*/
+
+@import 'underscores';
+@import 'bootstrap-theme';
+
+/*------------------------------------*\
+  #Layout
+\*------------------------------------*/
+
+body {
+  font-size: 16px;
+  color: $grey;
+  font-family: $body-font;
+  background: #fff;
+}
+
+.site-header {
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+
+  @media ( max-width: 767px ) {
+    .site-navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  @media ( max-width: 1199px ) {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+.site-branding  {
+  width: 25%;
+  margin: 0 auto;
+
+  .site-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.site-header-wrap {
+  position: relative;
+
+  .site-address,
+  .site-phone {
+    font-size: 12px;
+    font-family: $heading-font;
+  }
+
+  @media ( min-width: 768px ) {
+    .site-address,
+    .site-phone {
+      position: absolute;
+      top: 25%;
+    }
+    .site-address {
+      right: 0;
+    }
+    .site-phone {
+      left: 0;
+    }
+  }
+
+  @media ( min-width: 992px ) {
+    .site-address,
+    .site-phone {
+      font-size: 20px;
+    }
+  }
+}
+
+.site-feature {
+  border-bottom: solid 10px $light-grey;
+  overflow: hidden
+}
+
+.site-footer {
+  color: #fff;
+  padding-top: 50px;
+  background-color: $brand-color;
+
+  @media ( max-width: 767px ) {
+    .site-address {
+      text-align: center;
+    }
+  }
+
+  @media ( min-width: 768px ) {
+    .site-address {
+      margin-top: 50px;
+    }
+  }
+
+  .site-info {
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: rgba(0,0,0,.40);
+    a {
+      color: #fff;
+    }
+    @media ( min-width: 992px ) {
+      .sep {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/*------------------------------------*\
+  #Section
+\*------------------------------------*/
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section-header {
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+  .section-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.section-bg {
+  background-image: url('../images/layout/brow-bg.jpg');
+  background-repeat: repeat;
+  background-position: center center;
+}
+.section-map {
+  line-height: 0;
+
+  iframe {
+    width: 100%;
+    min-height: 500px;
+  }
+}
+
+.section-brand-bg {
+  background-color: $brand-color;
+}
+.section-brand-bg {
+  .brand-item img {
+    width: 150px;
+  }
+
+  @media ( min-width: 992px ) {
+    .brand-item img {
+      width: 200px;
+    }
+  }
+}
+
+/*------------------------------------*\
+  #Testimonials
+\*------------------------------------*/
+
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)),
+    url('../images/feature/featured-image-1600x600.jpg');
+}
+.section-testimonials .testimonial-item {
+  color: #fff;
+}
+.section-testimonials .owl-theme .owl-dots .owl-dot span {
+  background: $light-grey;
+}
+.section-testimonials .owl-theme .owl-dots .owl-dot.active span,
+.section-testimonials .owl-theme .owl-dots .owl-dot:hover span {
+  background:  $brand-color;
+}
+
+/*------------------------------------*\
+  #Cards
+\*------------------------------------*/
+
+.card {
+  line-height: 1.2;
+}
+.card-bg {
+  color: #fff;
+  background-color: $brand-color;
+
+  a,
+  .card-title {
+    color: #fff;
+  }
+  .btn {
+    color: $brand-color;
+    &:hover,
+    &:focus {
+      color: $light-grey;
+    }
+    &:active {
+      color: $brand-color;
+    }
+  }
+}
+.card-body {
+  padding: 20px;
+}
+
+/*------------------------------------*\
+  #Styles
+\*------------------------------------*/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,  {
+  color: $brand-color;
+  font-family: $heading-font;
+  font-weight: 700;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+figure {
+  margin: 0;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+img.media-object {
+  max-width: none;
+}
+textarea {
+  resize: vertical;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*------------------------------------*\
+  #Headings
+\*------------------------------------*/
+
+.page-header {
+  margin: 0 0 20px;
+  padding: 0;
+  border-bottom: none;
+
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.title-divider {
+  overflow: hidden;
+}
+.title-divider span {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+}
+.title-divider.text-center span {
+  padding-left: 10px;
+}
+
+@media ( min-width: 768px ) {
+  .title-divider.text-center span {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.title-divider span:before,
+.title-divider span:after {
+  content: '';
+  position: absolute;
+  width: 1140px;
+}
+.title-divider span:before {
+  top: 50%;
+  left: 100%;
+}
+.title-divider span:after {
+  top: 50%;
+  right: 100%;
+}
+.title-divider-light {
+  color: #fff;
+}
+.title-divider-light span:before,
+.title-divider-light span:after {
+  border-top: solid 2px #fff;
+}
+.title-divider-brand  span:before,
+.title-divider-brand span:after {
+  border-top: solid 2px $brand-color;
+}
+.title-divider-dark span:before,
+.title-divider-dark span:after {
+  border-top: solid 2px $grey;
+}
+
+/*------------------------------------*\
+  #Widgets
+\*------------------------------------*/
+
+.search-form label {
+  display: block;
+}
+.search-form .search-field,
+.search-form .search-submit {
+  width: 100%;
+}
+.sidebar-header {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/*------------------------------------*\
+  #List
+\*------------------------------------*/
+
+.list-bordered li {
+  padding-right: 10px;
+  border-right: solid 1px #ccc;
+}
+.list-bordered li:last-child {
+  padding-right: 5px;
+  border-right: none;
+}
+.list-indent {
+  padding-left: 20px;
+}
+.list-links {
+  margin-bottom: 20px;
+}
+.list-links li a {
+  color: #000;
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+.list-links li a:hover {
+  color: $grey;
+}
+
+/*------------------------------------*\
+  #Misc Classes
+\*------------------------------------*/
+
+.media-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.brand-text {
+  color: $brand-color;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.sep {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*------------------------------------*\
+  #Gravity Forms
+\*------------------------------------*/
+
+.gform_wrapper .gform_footer input.button {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #000;
+  padding: 10px 20px;
+  background-color: $brand-color;
+  border-color: $brand-color;
+  background-image: none;
+}
+
+.gform_wrapper .gform_footer input.button:hover {
+  border-color: $grey;
+  background-color: $grey;
+  background-position: 0 -15px;
+}
+
+.gform_wrapper .gform_footer input.button:focus,
+.gform_wrapper .gform_footer input.button:active {
+  border-color: $brand-color;
+  background-color: $brand-color;
+  background-position: 0 -15px;
+}
+
+/*------------------------------------*\
+  #Meta Slider
+\*------------------------------------*/
+
+.site-feature .metaslider .flexslider {
+  margin: 0;
+}
+.site-feature .flex-direction-nav a {
+  width: 50px;
+  height: 50px;
+  background: url( '../images/layout/icon-arrows.png') no-repeat 0 0;
+}
+.site-feature .flex-direction-nav .flex-next {
+  background-position: 100% 0;
+  right: -50px;
+}
+.site-feature .flex-direction-nav .flex-prev {
+  left: -50px;
+}
+.site-feature .flexslider:hover .flex-next {
+  right: 15px;
+}
+.site-feature .flexslider:hover .flex-prev {
+  left: 15px;
+}

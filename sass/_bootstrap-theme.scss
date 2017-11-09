@@ -1,0 +1,287 @@
+/*------------------------------------*\
+  #Navigation
+\*------------------------------------*/
+
+.navbar-default {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 0;
+  border-color: transparent;
+  background-color: transparent;
+  font-family: $heading-font;
+}
+.navbar-default .navbar-brand {
+  color: $grey;
+  padding: 10px;
+  height: auto;
+  width: 150px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: $brand-color;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: $brand-color;
+}
+.navbar-default .navbar-nav > li > a {
+  color: $grey;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $brand-color;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: $brand-color;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: $light-grey;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  top: 0;
+  float: none;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-color: transparent;
+  box-shadow: none;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: yellow;
+}
+.navbar-default .navbar-toggle .glyphicon {
+  color: $brand-color;
+  font-size: 20px;
+  text-shadow: none;
+}
+.navbar-toggle.toggled .glyphicon {
+  color: #fff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+@media ( min-width: 768px ) {
+  .navbar-default .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: $brand-color;
+  background-color: transparent;
+}
+
+/*------------------------------------*\
+  # Dropdown
+\*------------------------------------*/
+
+.dropdown-menu {
+  min-width: 200px;
+  padding: 10px 0;
+  text-align: left;
+  background-color: #f6f6f6 ;
+  border: 1px solid #e7e7e7;
+}
+.dropdown-menu > li > a {
+  padding: 5px 20px;
+  color: $brand-color;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: $grey;
+  background-color: transparent;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: $grey;
+  background-color: transparent;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  background-color: transparent;
+  background-image: none;
+}
+
+@media ( max-width: 767px ) {
+  .navbar-default .navbar-collapse {
+    background: $brand-color;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background-color: $brand-color;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: $grey;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:focus,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: $grey;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: $light-grey;
+    background-color: transparent;
+  }
+}
+
+/*------------------------------------*\
+  # Menu Display Table
+\*------------------------------------*/
+
+@media ( min-width: 768px ) {
+  .navbar-default .navbar-nav {
+    float: none;
+    width: 100%;
+    display: table;
+  }
+  .navbar-default .navbar-nav > li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+  }
+}
+
+@media ( min-width:992px ) {
+  .dropdown-menu {
+    left: 50%;
+    margin-left: -100px;
+  }
+}
+
+/*------------------------------------*\
+  #Buttons
+\*------------------------------------*/
+
+.btn {
+  border-radius: 0;
+  border-width: 2px;
+}
+.btn-default {
+  color: $brand-color;
+  background-color: #fff;
+  border-color: $brand-color;
+}
+.btn-default:hover,
+.btn-default:focus  {
+  color: #fff;
+  background-color: $brand-color;
+  border-color: #fff;
+}
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active:focus {
+  color: $brand-color;
+  background-color: #fff;
+  border-color: $brand-color;
+}
+.btn-primary {
+  color: #fff;
+  background-color: $brand-color;
+  border-color: $brand-color;
+}
+.btn-primary:hover,
+.btn-primary:focus  {
+  color: $brand-color;
+  background-color: #fff;
+  border-color: $brand-color;
+}
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+  color: #fff;
+  background-color: $brand-color;
+  border-color: $brand-color;
+}
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.btn-transparent:hover,
+.btn-transparent:focus  {
+  color: $grey;
+  background-color: transparent;
+  border-color: $grey;
+}
+.btn-transparent:active,
+.btn-transparent:active:hover,
+.btn-transparent:active:focus {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+
+/*------------------------------------*\
+  #Panels
+\*------------------------------------*/
+
+.panel {
+  border-radius: 0;
+}
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+}
+.panel-default {
+  border-color: $brand-color;
+}
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: $brand-color;
+  border-color: darken($brand-color,20%);
+}
+
+/*------------------------------------*\
+  #Misc
+\*------------------------------------*/
+
+.well {
+  border-radius: 0;
+}
