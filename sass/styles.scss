@@ -35,17 +35,7 @@ body {
 
 .site-header {
   padding-top: 20px;
-  position: relative;
-  z-index: 1;
 
-  @media ( max-width: 767px ) {
-    .site-navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-  }
   @media ( max-width: 1199px ) {
     .container {
       width: 100%;
@@ -60,37 +50,6 @@ body {
   .site-title {
     margin-top: 0;
     margin-bottom: 0;
-  }
-}
-
-.site-header-wrap {
-  position: relative;
-
-  .site-address,
-  .site-phone {
-    font-size: 12px;
-    font-family: $heading-font;
-  }
-
-  @media ( min-width: 768px ) {
-    .site-address,
-    .site-phone {
-      position: absolute;
-      top: 25%;
-    }
-    .site-address {
-      right: 0;
-    }
-    .site-phone {
-      left: 0;
-    }
-  }
-
-  @media ( min-width: 992px ) {
-    .site-address,
-    .site-phone {
-      font-size: 20px;
-    }
   }
 }
 
