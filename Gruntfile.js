@@ -40,7 +40,8 @@ module.exports = function(grunt) {
           src : [
           'css/styles.min.css',
           '*.php',
-          '**/*.php'
+          '**/*.php',
+          'js/*.js'
           ]
         },
         options: {
