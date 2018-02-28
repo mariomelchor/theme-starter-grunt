@@ -13,6 +13,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      options: {
+        mangle: false,
+        sourceMap: true
+      },
+      my_target: {
+        files: {
+          'js/scripts.min.js': [
+            'src/js/google-fonts.js'
+          ]
+        }
+      }
+    },
     cssmin: {
       options: {
         sourceMap: false
@@ -32,6 +45,10 @@ module.exports = function(grunt) {
       sass: {
         files: ['sass/*.scss'],
         tasks: ['sass', 'cssmin'],
+      },
+      js: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify'],
       }
     },
     browserSync: {
@@ -52,6 +69,7 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
